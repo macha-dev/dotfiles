@@ -37,3 +37,4 @@
 
 urxvt.font: xft:mono:medium:size=12
 urxvt.letterSpace: -1
+urxvt.scrollBar: false
