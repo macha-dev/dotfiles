@@ -1,0 +1,72 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+"Plugins 
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-commentary'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-airline/vim-airline'
+Plugin 'morhetz/gruvbox'
+Plugin 'w0rp/ale'
+Plugin 'pangloss/vim-javascript'
+Plugin 'maxmellon/vim-jsx-pretty'
+Plugin 'neovimhaskell/haskell-vim'
+call vundle#end()          
+
+filetype plugin indent on				
+syntax enable							" syntax highlighting 
+set number								" line numbers	
+set mouse=a								" enables mouse
+set ttymouse=sgr						" mouse type
+set wrap								" word wrap
+set linebreak							" wrap on line break 
+set tabstop=4							" number of spaces a tab is replaced with 
+set shiftwidth=4						" amount of whitespace in normal mode on newline 
+set backspace=indent,eol,start
+set nobackup
+set showcmd
+set showmode
+set showmatch
+set hlsearch
+set history=1000
+set cursorline 
+set wildmenu
+set wildmode=list:longest
+set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+set clipboard=unnamedplus
+set ignorecase
+set smartcase
+
+"Gruvbox
+set background=dark
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
+highlight Normal ctermbg=None
+
+"Commentary
+noremap <C-_> :Commentary<CR>
+
+"Ale
+let g:ale_python_pylint_options = '--disable=C'
+
+"NerdTree
+let NERDTreeQuitOnOpen=1
+
+"Bindings
+nnoremap <F4> :NERDTreeToggle<CR>
+autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+nnoremap <F8> :ALEDetail<CR>
+map <esc> :noh <CR>
+
+"Haskell-vim
+let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
+let g:haskell_classic_highlighting = 1

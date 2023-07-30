@@ -1,0 +1,7 @@
+alias dupe='urxvt &'
+alias ls='ls --color'
+alias sp='urxvt -name scratchpad &'
+alias lock='i3lock -i ~/.config/i3/lock/lock.png'
+alias mutt='urxvt -name mutt -e bash -c neomutt &'
+alias irssi='urxvt -name irssi -e bash -c irssi &'
+alias pause='dunstctl set-paused toggle'
