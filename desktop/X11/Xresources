@@ -1,63 +1,101 @@
+Xft.dpi: 144
 !! Colorscheme
-
-! special
+!! OLD
+/* ! special */
 *.foreground: #93a1a1
-!*.background: #141c21
+/* !*.background: #141c21 */
 *.background: #000000
 *.cursorColor: #afbfbf
 
+/* ! black */
+/* *.color0: #263640 */
+/* *.color8: #4a697d */
+
+/* ! red */
+/* *.color1: #d12f2c */
+/* *.color9: #fa3935 */
+
+/* ! green */
+/* *.color2: #819400 */
+/* *.color10: #a4bd00 */
+
+/* ! yellow */
+/* *.color3: #b08500 */
+/* *.color11: #d9a400 */
+
+/* ! blue */
+/* *.color4: #2587cc */
+/* *.color12: #2ca2f5 */
+
+/* ! magenta */
+/* *.color5: #696ebf */
+/* *.color13: #8086e8 */
+
+/* ! cyan */
+/* *.color6: #289c93 */
+/* *.color14: #33c5ba */
+
+/* ! white */
+/* *.color7: #bfbaac */
+/* *.color15: #fdf6e3 */
+
 ! black
-*.color0: #263640
-*.color8: #4a697d
+*.color0: #000000
+*.color8: #646464
 
 ! red
-*.color1: #d12f2c
-*.color9: #fa3935
+*.color1: #DD7474
+*.color9: #FB7474
 
 ! green
-*.color2: #819400
-*.color10: #a4bd00
+*.color2: #DD9A74
+*.color10: #F1A474
 
 ! yellow
-*.color3: #b08500
-*.color11: #d9a400
+*.color3: #DDBF74
+*.color11: #F1C974
 
 ! blue
-*.color4: #2587cc
-*.color12: #2ca2f5
+*.color4: #DD7474
+*.color12: #FB7474
 
 ! magenta
-*.color5: #696ebf
-*.color13: #8086e8
+*.color5: #DD9A74
+*.color13: #F1A474
 
 ! cyan
-*.color6: #289c93
-*.color14: #33c5ba
+*.color6: #DDBF74
+*.color14: #F1C974
 
 ! white
-*.color7: #bfbaac
-*.color15: #fdf6e3
+*.color7: #B4B4B4
+*.color15: #F1F1F1
+
 
 !urxvt.font: xft:source code pro:size=12:antialias=true
 !urxvt.font: xft:source code pro:size=10:antialias=true
-urxvt.font: xft:hack:size=12:antialias=true 
-urxvt.scrollBar: false
-URxvt.letterSpace: -1 
-URxvt.lineSpace: 0
-URxvt.geometry: 92x24
-URxvt.internalBorder: 0
-URxvt.cursorBlink: false
-URxvt.cursorUnderline: true 
-URxvt.saveline: 2048
-URxvt.scrollBar_right: false
-URxvt.urgentOnBell: true
-URxvt.depth: 24
-URxvt.iso14755: false
+/* urxvt.font: xft:hack:size=11:antialias=true */
+/* URxvt*.font: xft:hack:size=10:antialias=true */
+URxvt*.font: xft:Terminus:size=11:antialias=true
+URxvt*.scrollBar: false
+URxvt*.letterSpace: 0
+URxvt*.lineSpace: 0
+URxvt*.geometry: 92x24
+URxvt*.internalBorder: 0
+URxvt*.cursorBlink: false
+URxvt*.cursorUnderline: true 
+URxvt*.saveline: 2048
+URxvt*.scrollBar_right: false
+URxvt*.urgentOnBell: true
+URxvt*.depth: 24
+URxvt*.iso14755: false
 
-URxvt.keysym.Control-Up:     \033[1;5A
-URxvt.keysym.Control-Down:   \033[1;5B
-URxvt.keysym.Control-Left:   \033[1;5D
-URxvt.keysym.Control-Right:  \033[1;5C
+! Fixes half spacing for urxvt when opening
+URxvt.geometry: 400x400
 
-Xcursor.size: 16
+URxvt*.keysym.Control-Up:     \033[1;5A
+URxvt*.keysym.Control-Down:   \033[1;5B
+URxvt*.keysym.Control-Left:   \033[1;5D
+URxvt*.keysym.Control-Right:  \033[1;5C
+
 URxvt*.perl-ext-common: resize-font
